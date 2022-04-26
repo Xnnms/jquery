@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="/fancybox/jquery.fancybox-1.3.4.css"
+      type="text/css"
+      media="screen"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="responsiveslides.min.js"></script>
+    <script src="/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+    <script src="/fancybox/jquery.easing-1.4.pack.js"></script>
+    <script src="/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+    <title>Airsoft Station</title>
+  </head>
+  <body>
+    <div class="header">
+      <header>
+        <h1>Airsoft Station</h1>
+        <nav>
+          <ul>
+            <li><a href="airsoft.html"> Home</a></li>
+            <li><a href="airsoft2.html"> Galery</a></li>
+            <li><a href=""> Ammo's</a></li>
+            <li><a href=""> Tactical Gear</a></li>
+            <li><a href=""> Parts</a></li>
+          </ul>
+        </nav>
+      </header>
+      <section class="main">
+        <!-- content -->
+        <article>
+          <!-- menggup blok -->
+          <figure>
+            <ul class="rslides">
+              <li><img src="img1.jpg" alt="" /></li>
+
+              <li><img src="snp1.jpg" alt="" /></li>
+
+              <li><img src="snp2.jpg" alt="" /></li>
+            </ul>
+          </figure>
+          <hgroup>
+            <h2>SW-10G - Tan</h2>
+            <h3>Sniper Rifle Replica (with Scope)</h3>
+          </hgroup>
+          <p>
+            A spring-powered sniper rifle replica. The replica is a bolt-action,
+            which means that it needs to be reloaded before each shot. The
+            handguard and the stock are made out of strong plastic. The barrel,
+            the trigger guard, the bolt, the magazine well and the reloading
+            lever are mate out of metal.
+          </p>
+        </article>
+        <!-- content -->
+        <article>
+          <figure>
+            <ul class="rslides">
+              <li><img src="img2.jpg" alt="" /></li>
+
+              <li><img src="snp3.jpg" alt="" /></li>
+
+              <li><img src="snp4.jpg" alt="" /></li>
+            </ul>
+          </figure>
+          <hgroup>
+            <h2>AR-093E - Black</h2>
+            <h3>X-Class Model 12 Carbine Replica</h3>
+          </hgroup>
+          <p>
+            Model 12 from the X-Class series by Ares Airsoft, made entirely out
+            of metal, apart from: The stock, pistol grip and magazine. The
+            replica is characterized by a really good fitting of the elements,
+            which translates into a stable construction. Speaking of stability,
+            the muzzle velocity is 395 FPS +/- 3 FPS.
+          </p>
+        </article>
+      </section>
+      <aside>
+        <section class="popular">
+          <h2>Produk Populer</h2>
+          <a href="">G38 Pistol Replica - OLV</a>
+          <a href="">Tactical Vest Laser</a>
+          <a href="">G36 Low-Cap Magazine</a>
+          <a href="">SXR-002 Shotgun Replica</a>
+        </section>
+        <section class="contact">
+          <h2 class="flip">Contact</h2>
+          <p class="panel">
+            Instagram : @AirsoftStation<br />
+            Tokopedia : AirsoftStation <br />
+            Shopee : AirsoftStation
+          </p>
+        </section>
+        <section>
+          <div id="kotak"></div>
+          <br />
+          <button class="fadeout">Fade Out</button>
+          <button class="fadein">Fade In</button>
+          <button class="fadeto3">Fade To 0.3</button>
+        </section>
+        <section class="saran">
+          <h2 class="flip2">Saran</h2>
+          <form class="panel2">
+            <input class="form-password" type="password" />
+            <br />
+            <br />
+            <input type="checkbox" class="form-checkbox" /> Show password
+            <br />
+            <br />
+            <input class="form-submit" type="submit" value="Login" />
+          </form>
+        </section>
+      </aside>
+      <footer>footer</footer>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $("h1").dblclick(function () {
+          $(this).css("color", "red");
+        });
+        $("h2").click(function () {
+          $(this).css("color", "blue");
+        });
+        $("h3").mouseover(function () {
+          $(this).css("color", "green");
+        });
+        $("h3").mouseleave(function () {
+          $(this).css("color", "pink");
+        });
+        $("p").click(function () {
+          $(this).hide();
+        });
+        // $("a").click(function () {
+        //   alert("Maaf halaman belum tersedia");
+        // });
+        $(".fadeout").click(function () {
+          $("#kotak").fadeOut("slow");
+        });
+        $(".fadein").click(function () {
+          $("#kotak").fadeIn("slow");
+        });
+        $(".fadeto3").click(function () {
+          $("#kotak").fadeTo("9000", 0.3);
+        });
+        $(".flip").click(function () {
+          $(".panel").slideDown("slow");
+        });
+        $(".flip2").click(function () {
+          $(".panel2").slideDown("slow");
+        });
+        $(".form-checkbox").click(function () {
+          if ($(this).is(":checked")) {
+            $(".form-password").attr("type", "text");
+          } else {
+            $(".form-password").attr("type", "password");
+          }
+        });
+        $(".rslides").responsiveSlides({
+          auto: true,
+        });
+      });
+    </script>
+  </body>
+</html>
